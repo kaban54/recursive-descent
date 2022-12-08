@@ -19,7 +19,7 @@ int GetNum ()
         val += val * 10 + *s - '0';
         s++;
     }
-    if (s == old_s) printf ("Compilation Error: can't get a number.\n");
+    if (s == old_s) printf ("Error: can't get a number.\n");
 
     return val;
 }
@@ -65,7 +65,7 @@ int GetBrackets ()
     {
         s++;
         val = GetExp ();
-        if (*s != ')') printf ("Compilation Error: no closer bracket.\n");
+        if (*s != ')') printf ("Error: no closer bracket.\n");
         s++;
     }
     else val = GetNum ();
